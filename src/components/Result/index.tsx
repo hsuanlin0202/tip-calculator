@@ -26,7 +26,7 @@ type Props = {
 };
 const Result = ({ value, reset }: Props): JSX.Element => {
   return (
-    <div className="w-full flex flex-col justify-between rounded-2xl bg-teal-darkest p-6 md:p-10">
+    <div className="w-full flex flex-col justify-between rounded-2xl bg-teal-darkest p-6 md:p-10 relative mb-6 md:mb-0">
       <div>
         <AmountItem title="Tip Amount" amount={value.amount} />
         <AmountItem title="Total" amount={value.total} />
@@ -40,6 +40,7 @@ const Result = ({ value, reset }: Props): JSX.Element => {
       >
         RESET
       </button>
+      <div className="h-6 w-1 absolute top-full"></div>
     </div>
   );
 };
