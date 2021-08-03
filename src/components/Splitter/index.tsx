@@ -53,7 +53,6 @@ const Splitter = (): JSX.Element => {
   return (
     <div className="w-full h-full flex flex-col md:flex-row space-x-0 md:space-x-12 space-y-6 md:space-y-0">
       <Controller value={tipCounter} onChange={onChangeHandler} />
-
       <Result value={tipResult} reset={reset} />
     </div>
   );

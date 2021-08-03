@@ -1,11 +1,13 @@
 import React from "react";
 import { Input } from "../widgets";
+import { ReactComponent as Person } from "../../../images/icon-person.svg";
 
 type Props = {
   value: "" | number;
   onChange: (e: string) => void;
   isError: boolean;
 };
+
 const NumPpl = ({ value, onChange, isError }: Props): JSX.Element => {
   return (
     <div className="w-full">
@@ -16,7 +18,7 @@ const NumPpl = ({ value, onChange, isError }: Props): JSX.Element => {
 
       <Input
         id="ppl"
-        iconPath="/images/icon-person.svg"
+        icon={<Person />}
         placeholder="0"
         value={value}
         onChange={onChange}

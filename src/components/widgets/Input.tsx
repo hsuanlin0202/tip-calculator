@@ -5,17 +5,18 @@ type Props = {
   className?: string;
   id: string;
   error?: boolean;
-  iconPath?: string;
+  icon?: JSX.Element;
   placeholder?: string;
   placeholderDark?: boolean;
   value: string | number;
   onChange: (e: string) => void;
 };
+
 export const Input = ({
   className,
   id,
   error,
-  iconPath = "",
+  icon,
   placeholder = "",
   placeholderDark = false,
   value,
@@ -44,9 +45,9 @@ export const Input = ({
         onChange={(e) => onChange(e.target.value)}
       />
 
-      {iconPath && (
+      {icon && (
         <div className="absolute h-4 w-4 top-0 left-0 m-4 overflow-hidden">
-          <img src={iconPath} />
+          {icon}
         </div>
       )}
     </div>

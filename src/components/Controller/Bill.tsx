@@ -1,10 +1,12 @@
 import React from "react";
 import { Input } from "../widgets";
+import { ReactComponent as Dollar } from "../../../images/icon-dollar.svg";
 
 type Props = {
   value: number;
   onChange: (e: string) => void;
 };
+
 const Bill = ({ value, onChange }: Props): JSX.Element => {
   return (
     <div className="w-full">
@@ -12,7 +14,7 @@ const Bill = ({ value, onChange }: Props): JSX.Element => {
 
       <Input
         id="bill"
-        iconPath="/images/icon-dollar.svg"
+        icon={<Dollar />}
         placeholder="0"
         value={value}
         onChange={onChange}
